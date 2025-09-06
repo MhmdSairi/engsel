@@ -1,16 +1,50 @@
-How to run with TERMUX
-Update & Upgrade Termux
+# MYnyak Engsel
+
+![banner](banner.png)
+
+CLI client for a certain Indonesian mobile internet service provider.
+
+# How to get API Key
+Chat telegram bot [@fykxt_bot](https://t.me/fykxt_bot) with message `/viewkey`. Copy the API key.
+
+# How to run with TERMUX
+1. Update & Upgrade Termux
+```
 apt update && apt full-upgrade
-Install Git
+```
+2. Install Git
+```
 pkg install git
-Install Python
+```
+3. Install Python
+```
 pkg install python
-Clone this repo
+```
+4. Clone this repo
+```
 git clone https://github.com/purplemashu/mynyak-engsel
-Open the folder
+```
+5. Open the folder
+```
 cd mynyak-engsel
-Install dependencies
+```
+6. Install dependencies
+```
 pip install -r requirements.txt
-Run the script
+```
+7. Run the script
+```
 python main.py
-Input your API key when prompted
+```
+8. Input your API key when prompted
+
+# Info
+
+## PS for Certain Indonesian mobile internet service provider
+
+Instead of just delisting the package from the app, ensure the user cannot purchase it.
+What's the point of strong client side security when the server don't enforce it?
+
+## Contact
+
+contact@mashu.lol
