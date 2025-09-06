@@ -16,7 +16,7 @@ def pause():
     
 def show_banner():
     print("--------------------------")
-    print("Dor XL by Flyxt9")
+    print("MHMDSAIRI")
     print("--------------------------")
     
 def show_main_menu(number, balance, balance_expired_at):
@@ -26,6 +26,9 @@ def show_main_menu(number, balance, balance_expired_at):
     expired_at = balance_expired_at
     expired_at_dt = datetime.fromtimestamp(expired_at).strftime("%Y-%m-%d %H:%M:%S")
     
+    print("--------------------------")
+    print("Login : MhmdSairi")
+    print("Account : Premium")
     print("--------------------------")
     print("Informasi Akun")
     print(f"Nomor: {phone_number}")
@@ -270,6 +273,28 @@ def show_package_details(api_key, tokens, package_option_code):
         return True
     elif choice == '2':
         show_multipayment(api_key, tokens, package_option_code, token_confirmation, price, item_name)
+        input("Silahkan lakukan pembayaran & cek hasil pembelian di aplikasi MyXL. Tekan Enter untuk kembali.")
+        return True
+    elif choice == '3':
+        show_qris_payment(api_key, tokens, package_option_code, token_confirmation, price, item_name)
+        input("Silahkan lakukan pembayaran & cek hasil pembelian di aplikasi MyXL. Tekan Enter untuk kembali.")
+        return True
+    elif choice == '4':
+        settlement_bounty(
+            api_key=api_key,
+            tokens=tokens,
+            token_confirmation=token_confirmation,
+            ts_to_sign=ts_to_sign,
+            payment_target=package_option_code,
+            price=price,
+            item_name=name2
+        )
+    else:
+        print("Purchase cancelled.")
+        return False
+    pause()
+    sys.exit(0)
+ipayment(api_key, tokens, package_option_code, token_confirmation, price, item_name)
         input("Silahkan lakukan pembayaran & cek hasil pembelian di aplikasi MyXL. Tekan Enter untuk kembali.")
         return True
     elif choice == '3':
